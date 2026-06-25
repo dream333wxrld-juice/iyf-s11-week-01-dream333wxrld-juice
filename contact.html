@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Gilbert Mungai</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+        }
+
+        nav {
+            background-color: #111;
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ff6b35;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ff6b35;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6b35;
+        }
+
+        nav ul li a.active {
+            color: #ff6b35;
+            font-weight: 600;
+            border-bottom: 2px solid #ff6b35;
+            padding-bottom: 2px;
+        }
+
+        .page-header {
+            padding: 60px 40px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .page-header h1 span {
+            color: #ff6b35;
+        }
+
+        .page-header p {
+            color: #aaa;
+            font-size: 1rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 50px;
+        }
+
+        /* LEFT SIDE INFO */
+        .contact-info h2 {
+            font-size: 1.4rem;
+            color: #ff6b35;
+            margin-bottom: 20px;
+            border-left: 4px solid #ff6b35;
+            padding-left: 10px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+
+        .info-item h3 {
+            font-size: 0.9rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .info-item p,
+        .info-item a {
+            font-size: 0.95rem;
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .info-item a:hover {
+            color: #ff6b35;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links h2 {
+            font-size: 1.4rem;
+            color: #ff6b35;
+            margin-bottom: 16px;
+            border-left: 4px solid #ff6b35;
+            padding-left: 10px;
+        }
+
+        .social-links ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .social-links ul li a {
+            text-decoration: none;
+            color: #ccc;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .social-links ul li a:hover {
+            color: #ff6b35;
+        }
+
+        /* FORM */
+        .contact-form h2 {
+            font-size: 1.4rem;
+            color: #ff6b35;
+            margin-bottom: 24px;
+            border-left: 4px solid #ff6b35;
+            padding-left: 10px;
+        }
+
+        fieldset {
+            border: 1px solid #2a2a2a;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            color: #ff6b35;
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            color: #aaa;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 10px 14px;
+            color: #e0e0e0;
+            font-size: 0.9rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #ff6b35;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        select option {
+            background-color: #1a1a1a;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: #ff6b35;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            background-color: #ff6b35;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #e55a27;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            background-color: #0a0a0a;
+            color: #555;
+            font-size: 0.85rem;
+            border-top: 1px solid #1f1f1f;
+        }
+
+        @media (max-width: 700px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">GK.</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Get In <span>Touch</span></h1>
+        <p>Let's connect — I'm open to collaborations, questions, and opportunities</p>
+    </div>
+
+    <main>
+
+        <!-- LEFT: Info + Social -->
+        <aside>
+            <div class="contact-info">
+                <h2>Contact Info</h2>
+                <div class="info-item">
+                    <h3>Email</h3>
+                    <a href="mailto:dream333wxrld@gmail.com">dream333wxrld@gmail.com</a>
+                </div>
+                <div class="info-item">
+                    <h3>Phone</h3>
+                    <a href="tel:+254110911799">+254 110 911 799</a>
+                </div>
+                <div class="info-item">
+                    <h3>Location</h3>
+                    <p>Nairobi, Kenya</p>
+                </div>
+                <div class="info-item">
+                    <h3>Timezone</h3>
+                    <p>East Africa Time (EAT) — UTC+3</p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <h2>Social Media</h2>
+                <ul>
+                    <li><a href="https://github.com/dream333wxrld-juice" target="_blank">🐙 GitHub — dream333wxrld-juice</a></li>
+                    <li><a href="#" target="_blank">💼 LinkedIn</a></li>
+                    <li><a href="#" target="_blank">🐦 Twitter / X</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- RIGHT: Form -->
+        <section class="contact-form">
+            <h2>Send a Message</h2>
+
+            <fieldset>
+                <legend>Your Details</legend>
+
+                <div class="form-group">
+                    <label for="fullname">Full Name *</label>
+                    <input
+                        type="text"
+                        id="fullname"
+                        name="fullname"
+                        placeholder="e.g. Jane Doe"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="e.g. jane@example.com"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number (optional)</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="e.g. +254 700 000 000"
+                    >
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Message</legend>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected>Select a subject</option>
+                        <option value="collaboration">Collaboration / Project</option>
+                        <option value="freelance">Freelance Work</option>
+                        <option value="general">General Enquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message * (min. 50 characters)</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message here..."
+                        required
+                        minlength="50"
+                    ></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to my newsletter for updates</label>
+                </div>
+            </fieldset>
+
+            <button type="submit">Send Message</button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gilbert Mungai. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

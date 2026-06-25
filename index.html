@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gilbert Mungai - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+        }
+
+        /* NAV */
+        nav {
+            background-color: #111;
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ff6b35;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ff6b35;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6b35;
+        }
+
+        nav ul li a.active {
+            color: #ff6b35;
+            font-weight: 600;
+            border-bottom: 2px solid #ff6b35;
+            padding-bottom: 2px;
+        }
+
+        /* HERO */
+        header {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        header h1 span {
+            color: #ff6b35;
+        }
+
+        header p.tagline {
+            font-size: 1.3rem;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        header p.intro {
+            font-size: 1rem;
+            color: #ccc;
+            max-width: 600px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: #ff6b35;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #e55a27;
+        }
+
+        .btn-outline {
+            border: 2px solid #ff6b35;
+            color: #ff6b35;
+        }
+
+        .btn-outline:hover {
+            background-color: #ff6b35;
+            color: #fff;
+        }
+
+        /* QUICK LINKS SECTION */
+        section.links {
+            padding: 60px 40px;
+            text-align: center;
+            background-color: #111;
+        }
+
+        section.links h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+
+        .card-grid {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            border-radius: 10px;
+            padding: 30px 24px;
+            width: 220px;
+            text-align: center;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+
+        .card:hover {
+            border-color: #ff6b35;
+            transform: translateY(-4px);
+        }
+
+        .card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            color: #aaa;
+            margin-bottom: 16px;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #ff6b35;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 24px;
+            background-color: #0a0a0a;
+            color: #555;
+            font-size: 0.85rem;
+            border-top: 1px solid #1f1f1f;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">GK.</div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Hi, I'm <span>Gilbert Mungai</span></h1>
+        <p class="tagline">Web Developer · Entrepreneur · Problem Solver</p>
+        <p class="intro">
+            I'm a web development student at IYF Weekend Academy, building practical tools
+            and real-world projects. I also run Icon Auto Spare — an auto parts business in
+            Nairobi's Industrial Area.
+        </p>
+        <div class="btn-group">
+            <a href="projects.html" class="btn btn-primary">View My Projects</a>
+            <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+        </div>
+    </header>
+
+    <section class="links">
+        <h2>Explore My Portfolio</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="icon">👤</div>
+                <h3>About Me</h3>
+                <p>My background, skills, and journey into tech.</p>
+                <a href="about.html">Learn More →</a>
+            </div>
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>Projects</h3>
+                <p>Web apps and tools I've built.</p>
+                <a href="projects.html">See Projects →</a>
+            </div>
+            <div class="card">
+                <div class="icon">📬</div>
+                <h3>Contact</h3>
+                <p>Let's connect and work together.</p>
+                <a href="contact.html">Reach Out →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gilbert Mungai. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

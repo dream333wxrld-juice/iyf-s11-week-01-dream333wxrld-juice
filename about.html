@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Gilbert Mungai</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+        }
+
+        nav {
+            background-color: #111;
+            padding: 16px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ff6b35;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ff6b35;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #e0e0e0;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6b35;
+        }
+
+        nav ul li a.active {
+            color: #ff6b35;
+            font-weight: 600;
+            border-bottom: 2px solid #ff6b35;
+            padding-bottom: 2px;
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            padding: 60px 40px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .page-header h1 span {
+            color: #ff6b35;
+        }
+
+        .page-header p {
+            color: #aaa;
+            font-size: 1rem;
+        }
+
+        /* MAIN CONTENT */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* STORY */
+        .story {
+            margin-bottom: 60px;
+        }
+
+        .story h2 {
+            font-size: 1.8rem;
+            color: #ff6b35;
+            margin-bottom: 16px;
+            border-left: 4px solid #ff6b35;
+            padding-left: 12px;
+        }
+
+        .story p {
+            font-size: 1rem;
+            color: #ccc;
+            line-height: 1.9;
+            margin-bottom: 12px;
+        }
+
+        /* SKILLS */
+        .skills {
+            margin-bottom: 60px;
+        }
+
+        .skills h2 {
+            font-size: 1.8rem;
+            color: #ff6b35;
+            margin-bottom: 24px;
+            border-left: 4px solid #ff6b35;
+            padding-left: 12px;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill-tag {
+            background-color: #1a1a1a;
+            border: 1px solid #ff6b35;
+            color: #ff6b35;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            margin-bottom: 60px;
+        }
+
+        .timeline h2 {
+            font-size: 1.8rem;
+            color: #ff6b35;
+            margin-bottom: 30px;
+            border-left: 4px solid #ff6b35;
+            padding-left: 12px;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .timeline-year {
+            min-width: 80px;
+            font-size: 0.9rem;
+            color: #ff6b35;
+            font-weight: 700;
+            padding-top: 4px;
+        }
+
+        .timeline-content {
+            background-color: #111;
+            border: 1px solid #2a2a2a;
+            border-left: 3px solid #ff6b35;
+            border-radius: 8px;
+            padding: 16px 20px;
+            flex: 1;
+        }
+
+        .timeline-content h3 {
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .timeline-content p {
+            font-size: 0.9rem;
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            background-color: #0a0a0a;
+            color: #555;
+            font-size: 0.85rem;
+            border-top: 1px solid #1f1f1f;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">GK.</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>About <span>Me</span></h1>
+        <p>My story, skills, and journey into web development</p>
+    </div>
+
+    <main>
+
+        <section class="story">
+            <h2>My Story</h2>
+            <p>
+                My name is Gilbert Mungai, based in Nairobi, Kenya. I'm currently a student at
+                IYF Weekend Academy (Season 11), where I'm building a strong foundation in web
+                development — from HTML and CSS all the way to JavaScript and beyond.
+            </p>
+            <p>
+                Alongside my studies, I run <strong>Icon Auto Spare</strong>, an auto parts
+                business in Nairobi's Industrial Area. Running a business has pushed me to use
+                tech practically — I've built inventory management systems, pricing tools, and
+                other apps to keep things running smoothly.
+            </p>
+            <p>
+                I'm driven by the idea that code can solve real problems. Every project I build
+                is an opportunity to learn something new and make something useful.
+            </p>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">Responsive Design</span>
+                <span class="skill-tag">REST APIs</span>
+                <span class="skill-tag">Business Automation</span>
+            </div>
+        </section>
+
+        <section class="timeline">
+            <h2>Education & Experience</h2>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2026</div>
+                <div class="timeline-content">
+                    <h3>IYF Weekend Academy — Season 11</h3>
+                    <p>Currently enrolled in a structured web development programme covering HTML, CSS, JavaScript, Git workflows, and full-stack development.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2024</div>
+                <div class="timeline-content">
+                    <h3>Icon Auto Spare — Founder</h3>
+                    <p>Started and currently running an auto parts business in Nairobi's Industrial Area. Built internal tools including an inventory management system using Node.js and Express.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2023</div>
+                <div class="timeline-content">
+                    <h3>Self-Taught Programming</h3>
+                    <p>Started learning web development independently — exploring HTML, CSS, JavaScript, and Python through online resources and hands-on projects.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gilbert Mungai. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
